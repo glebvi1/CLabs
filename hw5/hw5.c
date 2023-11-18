@@ -54,6 +54,7 @@ int sum_max_even(int array[][NMAX], int m, int n) {
     for (int i=0; i<m; i++) {
         int current_max_even = 0;
         int current_sum = 0;
+
         for (int j=0; j<n; j++) {
             current_sum += array[i][j];
             if (array[i][j] % 2 == 0) {
