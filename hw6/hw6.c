@@ -56,6 +56,8 @@ int delete(double *array, int k) {
     while (index < last) {
         if (array[index] <= 0) {
             index++;
+            continue;
+
         }
 
         move_elements(array, k, index);
