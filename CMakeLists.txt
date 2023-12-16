@@ -12,4 +12,5 @@ add_library(Homeworks
         hw5/hw5.c
         hw6/hw6.c
         test2.c
-        "main (3).c")
+        hw6/dop6.c
+)

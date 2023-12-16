@@ -39,9 +39,8 @@ void move_elements(double *array, int k, int index) {
 }
 
 // Функция удаляет элементы
-// Возвращает 0, если ни один из элементов не удалился
-// Иначе, возвращает длину нового массива
-int delete(double *array, int k) {
+// Возвращает указатель на новое место в памяти
+double* delete(double *array, int k, int* new_size) {
     int first = first_max_index(array, k);
     int last = last_min_index(array, k);
     int count_delete_elements = 0;
@@ -49,7 +48,8 @@ int delete(double *array, int k) {
     // Или последний индекс указывает на один из двух первыв элементов (0 или 1)
     // То в этом массиве ничего удалять не нужно
     if (first >= k-2 || last <= 1) {
-        return 0;
+        *new_size = k;
+        return array;
     }
 
     int index = first+1;
@@ -57,7 +57,6 @@ int delete(double *array, int k) {
         if (array[index] <= 0) {
             index++;
             continue;
-
         }
 
         move_elements(array, k, index);
@@ -65,8 +64,9 @@ int delete(double *array, int k) {
         count_delete_elements++;
     }
 
-    array = realloc(array, (k-count_delete_elements) * sizeof(double));
-    return k-count_delete_elements;
+    *new_size = k - count_delete_elements;
+    array = realloc(array, (*new_size) * sizeof(double));
+    return array;
 }
 
 // Выделение памяти для массива из k элементов
@@ -111,19 +111,17 @@ int main() {
     create_array(array, k);
     printf("Вы создали массив: ");
     print_array(array, k);
-    int new_size = delete(array, k);
+
+    int new_size = k;
+    double* new_array = delete(array, k, &new_size);
 
     // После realloc память может выделиться некорректно
     if (array == NULL) {
         return 1;
     }
-    printf("\nПреобразованный массив: ");
 
-    if (new_size != 0) {
-        print_array(array, new_size);
-    } else {
-        print_array(array, k);
-    }
+    printf("\nПреобразованный массив: ");
+    print_array(new_array, new_size);
 
     return 0;
 }
