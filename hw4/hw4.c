@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <windows.h>
 
 // Поиск минимального элемента в вещественном массиве, длиной k, большего x
 // Если такого элемента нет (то есть a_i <= x для всех i), то возвращается NAN
@@ -75,7 +76,7 @@ void print_array(double *array, int k) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
     // Ввод переменных. Дружественный интерфейс
     printf("Выполнил задание: Вязов Глеб. Группа: БПМ231\n");
 

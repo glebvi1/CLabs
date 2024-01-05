@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <windows.h>
 
 // Функция считает сумму конечного числа для заданного количества членов ряда
 double a_n_with_epsilon(double x) {
@@ -43,7 +44,7 @@ double a_n_with_n(double x) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
 
     int flag;
     double x;

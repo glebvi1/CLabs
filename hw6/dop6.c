@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <windows.h>
 
 // Выделение памяти для массива из k элементов
 double* get_memory(int* k) {
@@ -63,7 +63,7 @@ double* add(double *array, int k, int *new_size) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
     // Ввод переменных. Дружественный интерфейс
     printf("Выполнил задание: Вязов Глеб. Группа: БПМ231\n");
 
@@ -86,4 +86,5 @@ int main() {
         print_array(new_array, new_size);
     }
 
+    return 0;
 }

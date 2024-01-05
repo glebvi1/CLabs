@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <windows.h>
 
 int const NMAX = 100;
 
@@ -74,7 +75,7 @@ int sum_max_even(int array[][NMAX], int m, int n) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
     // Ввод переменных. Дружественный интерфейс
     printf("Выполнил задание: Вязов Глеб. Группа: БПМ231\n");
 

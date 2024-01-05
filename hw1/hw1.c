@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <math.h> // Подключение модуля для работы с математикой
+#include <windows.h>
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
 
     int x, y;
     double z, a, b;

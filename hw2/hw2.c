@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <windows.h>
 
 int isBelongs(double x, double y) {
     return (y <= x / 2.0 && x*x + y*y <= 1) || (y == x / 2.0);
@@ -6,7 +7,7 @@ int isBelongs(double x, double y) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
 
     double x, y;
 

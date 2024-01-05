@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 // Функция возвращает индекс первого максимального элемента
 int first_max_index(double *array, int k) {
@@ -97,7 +98,7 @@ void print_array(double *array, int k) {
 
 int main() {
     // Меняем кодировку на UTF-8, чтобы можно было писать на русском
-    system("chcp 65001");
+    SetConsoleOutputCP(CP_UTF8);
     // Ввод переменных. Дружественный интерфейс
     printf("Выполнил задание: Вязов Глеб. Группа: БПМ231\n");
 
