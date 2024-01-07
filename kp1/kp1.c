@@ -56,6 +56,4 @@ int main() {
     printf("x=%d, y=%d, z=%d\n", x, y, z);
     printf("Ответ на C: v(10)=%d | v(16)=%xh \n", v, v);
     printf("Ответ на ассемблере: v(10)=%d | v(16)=%xh \n", res, res);
-
-    printf("\n%d %d", 0x4, -0x3FB1);
 }
