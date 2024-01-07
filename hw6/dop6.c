@@ -38,7 +38,7 @@ double* move_elements(double *array, int k, int index) {
     return array;
 }
 
-// Функция удаляет элементы
+// Функция добавляет элементы
 // Возвращает указатель на новое место в памяти
 double* add(double *array, int k, int *new_size) {
     int size = k;
