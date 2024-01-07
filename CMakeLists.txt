@@ -13,4 +13,6 @@ add_library(Homeworks
         hw6/dop6.c
         hw7/hw7.c
         test1.c
+        kp1/kp1.c
+        test2.c
 )
