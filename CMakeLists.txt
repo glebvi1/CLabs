@@ -15,4 +15,5 @@ add_library(Homeworks
         test1.c
         kp1/kp1.c
         test2.c
+        kp2/kp2.c
 )

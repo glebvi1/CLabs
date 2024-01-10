@@ -23,8 +23,8 @@ short int assembly(short int x, char y, char z) {
             "mov %0, ax             \n" // v = ax              (слово)
             ".att_syntax prefix;    \n"
             : "=r"(v)                // выходной оператор v --> %0
-            : "r"(x), "r"(y), "r"(z) // входное оператор x --> %1, y --> %2, z --> %3
-            : "eax"
+            : "r"(x), "r"(y), "r"(z) // входной оператор x --> %1, y --> %2, z --> %3
+            : "eax"                  // список разрушаемых регистров
             );
 
     return v;
