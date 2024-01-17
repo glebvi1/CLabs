@@ -124,5 +124,7 @@ int main() {
     printf("\nПреобразованный массив: ");
     print_array(new_array, new_size);
 
+    free(array);
+
     return 0;
 }

@@ -86,5 +86,7 @@ int main() {
         print_array(new_array, new_size);
     }
 
+    free(array);
+
     return 0;
 }
