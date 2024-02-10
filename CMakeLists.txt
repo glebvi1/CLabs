@@ -16,4 +16,7 @@ add_library(Homeworks
         kp1/kp1.c
         test2.c
         kp2/kp2.c
+        hw8/hw8.c
+        hw8/structs.h
+        hw8/repository.c
 )
