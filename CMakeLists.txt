@@ -19,4 +19,12 @@ add_library(Homeworks
         hw8/hw8.c
         hw8/structs.h
         hw8/repository.c
+        hw9/hw9.c
+        hw9/structs.h
+        hw9/repository.c
+        hw9/sorting.c
+        hw9/timing.c
+        test/prod.h
+        test/test123.c
+        test/test1234.c
 )

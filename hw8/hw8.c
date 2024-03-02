@@ -107,7 +107,7 @@ int main() {
 // Функция вызывает функцию поиска в зависимости от введенных значений
 void filter() {
     int command2, param2;
-    char param1[50];
+    char param1[N];
 
     printf("Введите номер поля:");
     scanf("%d", &command2);
